@@ -19,4 +19,8 @@ Log in to your Splunk instance in a web browser & upload a sample SSH log file t
 <img width="1920" height="1020" alt="Add Data and 1 more page - Personal - Microsoft​ Edge 22_11_2026 06_39_20" src="https://github.com/user-attachments/assets/ee1c608c-b4e9-4229-bee8-3650099a10ff" />
 <img width="1920" height="1020" alt="Add Data and 1 more page - Personal - Microsoft​ Edge 22_11_2026 06_37_12" src="https://github.com/user-attachments/assets/ff7939c4-06e6-4447-9fd0-c49cc0b64893" />
 
-## TASK - 2  
+## TASK - 2  stats Command
+
+	Gives summary (count, sum, average)
+	<img width="1920" height="1020" alt="Add Data and 1 more page - Personal - Microsoft​ Edge 22_11_2026 06_58_17" src="https://github.com/user-attachments/assets/e8b5c76e-fefb-47e7-abf4-9b97da4f39e1" />
+
