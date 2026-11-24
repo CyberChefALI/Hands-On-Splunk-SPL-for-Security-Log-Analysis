@@ -9,6 +9,8 @@ This project focuses on understanding essential SPL commands and performing prac
 
 	Install Splunk Enterprise or configure a suitable Splunk environment.
 
+## Practical - 1
+
 ## Practice core Splunk SPL queries
 
 ## TASK - 1  Starting a SPLUNK session:
@@ -52,11 +54,28 @@ Create a readable login_status field.
 Visualize event counts over time.
 <img width="1920" height="1020" alt="Search _ Splunk 10 6 1 1 and 3 more pages - Personal - Microsoft​ Edge 23_11_2026 13_52_05" src="https://github.com/user-attachments/assets/8e46c069-56be-4a02-8d2c-797f56000ce1" />
 
-## Project Conclusion
+## Practical - 2 
 
-This project provided practical knowledge of Splunk and Search Processing Language (SPL) for security log analysis and monitoring. It helped develop skills in identifying suspicious activities, investigating security events, and understanding basic threat detection techniques used in a SOC environment.
+## SSH Log Analysis
 
+## TASK - 1 ( stats count by event_type )
 
-PROJECT CREATED BY 
+It is Splunk search command that groups your log events by the event_type field and counts how many times each unique type occurs.
+<img width="1920" height="1020" alt="1" src="https://github.com/user-attachments/assets/1f1cae42-748f-40eb-91bd-2e3c115f1fcb" />
 
-## CYBERCHEFALI
+## TASK - 2 ( event_type="Successful SSH Login" | stats count by id.orig_h, username | sort -count )
+
+This command  groups your successful events by source IP address and username, counts how many events occurred for each pair, and ranks the results from highest count to lowest.
+<img width="1920" height="1020" alt="2" src="https://github.com/user-attachments/assets/35e12baa-c39b-4c51-bab7-2ba9748a37c3" />
+
+## TASK - 3 (  event_type="Failed SSH Login" | stats count by id.orig_h, username | sort -count )
+
+This command  groups your Failed events by source IP address and username, counts how many events occurred for each pair, and ranks the results from highest count to lowest.
+<img width="1920" height="1020" alt="3" src="https://github.com/user-attachments/assets/e5699fb4-b922-4e04-b5fb-dac435cfa114" />
+
+## TASK - 4 ( event_type="Multiple Failed Authentication Attempts" | stats count by id.orig_h, username | sort -count )
+
+it filters out normal traffic so Splunk only analyzes alerts or logs flagging repeated failed logins , events by source IP address and username, counts how many events occurred for each pair, and ranks the results from highest count to lowest.
+<img width="1920" height="1020" alt="4" src="https://github.com/user-attachments/assets/713ddb75-0f53-455b-bdc7-214d237f752e" />
+
+## TASK - 5 ( 
