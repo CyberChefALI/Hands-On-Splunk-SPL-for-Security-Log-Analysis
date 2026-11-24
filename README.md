@@ -78,4 +78,28 @@ This command  groups your Failed events by source IP address and username, count
 it filters out normal traffic so Splunk only analyzes alerts or logs flagging repeated failed logins , events by source IP address and username, counts how many events occurred for each pair, and ranks the results from highest count to lowest.
 <img width="1920" height="1020" alt="4" src="https://github.com/user-attachments/assets/713ddb75-0f53-455b-bdc7-214d237f752e" />
 
-## TASK - 5 ( 
+## TASK - 5 ( event_type="Failed SSH Login" | top username )
+
+This commands filters your logs to only failed SSH login events and then finds the most common usernames associated with those failures.
+<img width="1920" height="1020" alt="5" src="https://github.com/user-attachments/assets/abccb897-440a-4386-833c-4de5b8f890e7" />
+
+## TASK - 6 (  
+event_type="Multiple Failed Authentication Attempts"
+| table
+| id. orig_h
+| iplocation id.orig_h stats count by Country
+| geom geo_countries featureldField="Country"  )
+
+This query filters for multiple failed authentication attempts, maps each originating IP address to a country, counts how many failed attempts came from each country, and attaches geographic boundary shapes so Splunk can plot the results on a Choropleth map.
+<img width="1920" height="1020" alt="6" src="https://github.com/user-attachments/assets/b529f317-c33f-41e8-bf26-1c6947f8c489" />
+
+
+## CONCLUSION
+
+Based on the Splunk queries you explored, this project demonstrates how Security Information and Event Management (SIEM) log analysis is used to monitor, detect, and visualize SSH authentication activity and potential brute-force attacks.
+
+By filtering security logs by event_type, aggregating user and source IP (id.orig_h) patterns with stats and top, and mapping threat origins geographically with iplocation and geom, the project turns raw authentication logs into actionable security intelligence—helping analysts quickly identify targeted accounts, suspicious IP addresses, and high-risk geographic sources.
+
+
+## Project Created By
+## CYBERCHEFALI
